@@ -1,0 +1,25 @@
+{
+    "name": "Workhunt - Extension",
+    "version": "0.1.0",
+    "description": "Making job search easier",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*","http://*/*"],
+        "js": ["myscript.js"]
+      }
+    ],
+    "action": {
+      "default_title": "Workhunt - Extension",
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "manifest_version": 3,
+    "content_security_policy": {
+        "extension_page":"script-src 'self' 'wasm-unsafe-eval'; object-src 'self'" 
+    }
+  }
