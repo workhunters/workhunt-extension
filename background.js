@@ -1,24 +1,29 @@
-console.log("BACKGROUND",localStorage)
-// chrome.runtime.openOptionsPage();
+console.log("BACKGROUND")
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        console.log("SF")
+
       console.log(sender.tab ?
                   "from a content script:" + sender.tab.url :
                   "from the extension");
-      if (request.greeting === "hello"){
+   
+      if (request === "fillTheForm"){
+        // // FILLNOW()
+        // let x = document.getElementById("body")
+        // console.log("SD",x)
+        // sendResponse(100)
 
-            chrome.storage.sync.get(['userprofile'],(getData)=>{
-                console.log(getData)
-                if('userprofile' in getData){
-                    getData = getData['userprofile']
+        //     // chrome.storage.sync.get(['userprofile'],(getData)=>{
+        //     //     console.log(getData)
+        //     //     if('userprofile' in getData){
+        //     //         getData = getData['userprofile']
                     
-                    let value = JSON.parse(getData);
-                    sendResponse(value);
+        //     //         let value = JSON.parse(getData);
+        //     //         FILLNOW()
+        //     //         sendResponse(value);
                 
-                }
-            })
+        //     //     }
+        //     // })
 
 
       }

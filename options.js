@@ -10,6 +10,9 @@ let city = document.getElementsByName('city')[0];
 let addressline1 = document.getElementsByName('addressline1')[0];
 let addressline2 = document.getElementsByName('addressline2')[0];
 let pincode = document.getElementsByName('pincode')[0];
+let password = document.getElementsByName('password')[0];
+
+let passwordFormItem = document.getElementById('password-form-item');
 
 let yoe = document.getElementsByName('yoe')[0];
 
@@ -98,6 +101,22 @@ saveBtn.onclick = ()=>{
 })
 
 
+chrome.storage.sync.get(['user'],(getData)=>{
+        console.log(getData)
+        if('user' in getData){
+            let user = JSON.parse(getData.user);
+            console.log(user)
+            if(user.isLoggedIn){
+
+                passwordFormItem.style.display = "none";
+            }else{
+
+                passwordFormItem.style.display = "block";
+            }
+        }else{
+            passwordFormItem.style.display = "block";
+        }
+    })
 // Apply class to inputs
 let allinputs = document.getElementsByTagName('input')
 allinputs = [...allinputs, ...document.getElementsByTagName('select')]

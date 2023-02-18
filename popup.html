@@ -5,17 +5,23 @@
         <link type="text/css" rel="stylesheet" href="popup.css" />
     </head>
     <body>
+        <div class="title">Workhunt</div>
+        <div class="subtitle">Making job search easy</div>
         <div id="afterlogin">
             <button class="button" id="create">Create Profile</button>
             <button class="button" id="edit">Edit Profile</button>
-            <button class="button" id="autofill">Auto Fill</button>
-            <button class="button" id="go-to-options">Go to options</button>
+            <br />
+            <button class="button" id="autofill" style="display: none;">Auto Fill</button>
         </div>
         <div id="beforelogin">
+            <input type="text" class="input" name="emaillogin" placeholder="Email" />
+            <input type="text" class="input" name="passwordlogin" placeholder="Password" />
             <button class="button" id="login">Login</button>
+            <hr />
             <button class="button" id="signup">Sign up</button>
         </div>
     </body>
     <script src="popup.js"></script>
+    <script src="autofill.js"></script>
 
 </html>
