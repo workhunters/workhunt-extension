@@ -58,8 +58,10 @@ loginBtn.onclick = async ()=>{
 
 }
 signupBtn.onclick = async ()=>{
+    
     console.log("SIGNUP")
-    chrome.tabs.create({ url: 'https://workhunt-fe.pushpendrahpx.me/signup' });
+    moveToOptions()
+    
 }
 editBtn.onclick = moveToOptions;
 createBtn.onclick = moveToOptions;
@@ -101,42 +103,47 @@ console.log({
 
 
 let initialAuth = ()=>{
-    chrome.storage.sync.get(['user'],(getData)=>{
-        console.log(getData)
-        if('user' in getData){
-            let user = JSON.parse(getData.user);
-            console.log(user)
-            checkInitialDirty(user);
+    // afterlogin()
+    afterlogin.style.display = "block";
+    beforelogin.style.display = "none";
+    editBtn.style.display = 'none'
+    
+    // chrome.storage.sync.get(['user'],(getData)=>{
+    //     console.log(getData)
+    //     if('user' in getData){
+    //         let user = JSON.parse(getData.user);
+    //         console.log(user)
+    //         checkInitialDirty(user);
 
-        }else{
-            afterlogin.style.display = "none";
-            beforelogin.style.display = "block";
-            chrome.storage.sync.set({
-                user:JSON.stringify({
-                    isLoggedIn: false,
-                    data:{},
-                    key: null
-                })
-            },(e)=>{
-                console.log("CREATED STORAGWE",e)
-            })
-        }
-    })
-    chrome.storage.sync.get(['userprofile'],(getData)=>{
-        console.log(getData)
-        if('userprofile' in getData){
-            getData = getData['userprofile']
+    //     }else{
+    //         afterlogin.style.display = "none";
+    //         beforelogin.style.display = "block";
+    //         chrome.storage.sync.set({
+    //             user:JSON.stringify({
+    //                 isLoggedIn: false,
+    //                 data:{},
+    //                 key: null
+    //             })
+    //         },(e)=>{
+    //             console.log("CREATED STORAGWE",e)
+    //         })
+    //     }
+    // })
+    // chrome.storage.sync.get(['userprofile'],(getData)=>{
+    //     console.log(getData)
+    //     if('userprofile' in getData){
+    //         getData = getData['userprofile']
             
-            let value = JSON.parse(getData);
-            console.log(value)
-            createBtn.style.display = 'none';
-            editBtn.style.display = 'block';
+    //         let value = JSON.parse(getData);
+    //         console.log(value)
+    //         createBtn.style.display = 'none';
+    //         editBtn.style.display = 'block';
             
-        }else{
-            createBtn.style.display = 'block';
-            editBtn.style.display = 'none';
+    //     }else{
+    //         createBtn.style.display = 'block';
+    //         editBtn.style.display = 'none';
 
-        }
-    })
+    //     }
+    // })
 }
 initialAuth()

@@ -3,6 +3,7 @@ let firstname = document.getElementsByName('firstname')[0];
 let middlename = document.getElementsByName('middlename')[0];
 let lastname = document.getElementsByName('lastname')[0];
 let email = document.getElementsByName('email')[0];
+let username = document.getElementsByName('username')[0];
 let phone = document.getElementsByName('phone')[0];
 let country = document.getElementsByName('country')[0];
 let state = document.getElementsByName('state')[0];
@@ -10,9 +11,9 @@ let city = document.getElementsByName('city')[0];
 let addressline1 = document.getElementsByName('addressline1')[0];
 let addressline2 = document.getElementsByName('addressline2')[0];
 let pincode = document.getElementsByName('pincode')[0];
-let password = document.getElementsByName('password')[0];
+// let password = document.getElementsByName('password')[0];
 
-let passwordFormItem = document.getElementById('password-form-item');
+// let passwordFormItem = document.getElementById('password-form-item');
 
 let yoe = document.getElementsByName('yoe')[0];
 
@@ -73,7 +74,10 @@ var tempProfileInput = {
 
 
 let saveBtn = document.getElementById("save")
-saveBtn.onclick = ()=>{
+saveBtn.onclick = async ()=>{
+
+
+        
     let value = {};
     let allKeys = Object.keys(tempProfileInput);
     for(let key of allKeys){
@@ -84,6 +88,7 @@ saveBtn.onclick = ()=>{
         console.log(e)
     })
     // localStorage.setItem("userprofile",JSON.stringify(value))
+
 }
 
  chrome.storage.sync.get(['userprofile'],(getData)=>{
@@ -108,13 +113,13 @@ chrome.storage.sync.get(['user'],(getData)=>{
             console.log(user)
             if(user.isLoggedIn){
 
-                passwordFormItem.style.display = "none";
+                // passwordFormItem.style.display = "none";
             }else{
 
-                passwordFormItem.style.display = "block";
+                // passwordFormItem.style.display = "block";
             }
         }else{
-            passwordFormItem.style.display = "block";
+            // passwordFormItem.style.display = "block";
         }
     })
 // Apply class to inputs
@@ -123,3 +128,20 @@ allinputs = [...allinputs, ...document.getElementsByTagName('select')]
 for(let input of allinputs){
     input.className = "input"
 }
+
+firstname.value = 'Pushpendra';
+lastname.value = 'Vishwakarma';
+email.value = 'pushpendra@gmail.com'
+username.value = 'abcdef';
+phone.value = '2344323432';
+country.value = 'India'
+state.value = 'Gujarat'
+city.value = "Surat"
+addressline1.value = '601, Swami Bhavan'
+addressline2.value = 'SVNIT'
+pincode.value = '390013'
+yoe.value = 1;
+linkedin.value = 'https://www.linkedin.com/in/pushpendrahpx/'
+twitter.value = 'https://twitter.com/pushpendrahpx20'
+github.value = 'https://github.com/pushpendrahpx'
+gender.value = 'male'

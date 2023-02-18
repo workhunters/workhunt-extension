@@ -36,6 +36,7 @@ let FILLNOW = ()=>{
         try{
             let response = await chrome.storage.sync.get(['userprofile'])
             response = response['userprofile']
+     
             let data = JSON.parse(response);
             console.log(data)
     
@@ -54,6 +55,7 @@ let FILLNOW = ()=>{
     
     
 }
+FILLNOW();
 chrome.runtime.onMessage.addListener(function (response, sendResponse) {
     console.log(response);
     if(response.todo === 'fillTheForm'){
