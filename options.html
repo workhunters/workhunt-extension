@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Profile page - Workhunt</title>
-        <link type="text/css" rel="stylesheet" href="options.css" />
-    </head>
-    <body>
+  <head>
+    <title>Profile page - Workhunt</title>
+    <link type="text/css" rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <h1 class="title">Workhunt Extension - Profile Page</h1>
+    <hr />
+    <form>
+      <h2 class="subtitle">Personal Info</h2>
+      <div class="form-item">
+        <div class="form-item-title">Title</div>
+        <select name="title">
+          <option value="mr" selected>Mr.</option>
+          <option value="ms">Ms.</option>
+        </select>
+      </div>
 
-        <h1 class="title">Workhunt - Profile Page</h1>
-        <hr />
-        <form>
+      <div class="form-item">
+        <div class="form-item-title">First Name</div>
+        <input type="text" name="firstname" />
+      </div>
+      <div class="form-item">
+        <div class="form-item-title">Middle Name</div>
+        <input type="text" name="middlename" />
+      </div>
+      <div class="form-item">
+        <div class="form-item-title">Last Name</div>
+        <input type="text" name="lastname" />
+      </div>
 
-            <h2 class="subtitle">Personal Info</h2>
-            <div class="form-item">
-                <div class="form-item-title">Title</div>
-                <select name="title">
-                    <option value="mr" selected>Mr.</option>
-                    <option value="ms">Ms.</option>
-                </select>
-            </div>
-
-            <div class="form-item">
-                <div class="form-item-title">First Name</div>
-                <input type="text" name="firstname" />
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">Middle Name</div>
-                <input type="text" name="middlename" />
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">Last Name</div>
-                <input type="text" name="lastname" />
-            </div>
-
-
-            <div class="form-item">
-                <div class="form-item-title">Email</div>
-                <input type="text" name="email" />
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">Username</div>
-                <input type="text" name="username" />
-            </div>
-            <!-- <div class="form-item" id="password-form-item">
+      <div class="form-item">
+        <div class="form-item-title">Email</div>
+        <input type="text" name="email" />
+      </div>
+      <div class="form-item">
+        <div class="form-item-title">Username</div>
+        <input type="text" name="username" />
+      </div>
+      <!-- <div class="form-item" id="password-form-item">
                 <div class="form-item-title">Password</div>
                 <input type="text" name="password" placeholder="we won't share this to any website, this is for your account with us" />
                 <br />
             </div> -->
 
-            <div class="form-item">
-                <div class="form-item-title">Phone Number</div>
-                <input type="text" name="phone" />
-            </div>
+      <div class="form-item">
+        <div class="form-item-title">Phone Number</div>
+        <input type="text" name="phone" />
+      </div>
 
+      <hr />
+      <h2 class="subtitle">Address</h2>
+      <div class="form-item">
+        <div class="form-item-title">Country</div>
+        <input type="text" name="country" />
+      </div>
 
-            <hr />
-            <h2 class="subtitle">Address</h2>
-            <div class="form-item">
-                <div class="form-item-title">Country</div>
-                <input type="text" name="country" />
-            </div>
+      <div class="form-item">
+        <div class="form-item-title">State</div>
+        <input type="text" name="state" />
+      </div>
 
+      <div class="form-item">
+        <div class="form-item-title">city</div>
+        <input type="text" name="city" />
+      </div>
 
-            <div class="form-item">
-                <div class="form-item-title">State</div>
-                <input type="text" name="state" />
-            </div>
+      <div class="form-item">
+        <div class="form-item-title">Address Line 1</div>
+        <input type="text" name="addressline1" />
+      </div>
 
-
-            <div class="form-item">
-                <div class="form-item-title">city</div>
-                <input type="text" name="city" />
-            </div>
-
-
-
-            <div class="form-item">
-                <div class="form-item-title">Address Line 1</div>
-                <input type="text" name="addressline1" />
-            </div>
-
-
-            <div class="form-item">
-                <div class="form-item-title">Address Line 2</div>
-                <input type="text" name="addressline2" />
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">ZipCode/PinCode</div>
-                <input type="text" name="pincode" />
-            </div>
-<!-- 
+      <div class="form-item">
+        <div class="form-item-title">Address Line 2</div>
+        <input type="text" name="addressline2" />
+      </div>
+      <div class="form-item">
+        <div class="form-item-title">ZipCode/PinCode</div>
+        <input type="text" name="pincode" />
+      </div>
+      <!-- 
             <hr />
 
 
@@ -98,59 +89,66 @@
             </div>
                 <button type="button" class="btn" id="addmoreeducation">add more</button>
              -->
-            <hr />
+      <hr />
 
-            <h2 class="subtitle">Work Experience</h2>
-           
-            <div class="form-item">
-                <div class="form-item-title">Year of Experience</div>
-                <input type="text" name="yoe" placeholder="Enter You no. of Experience"  />
-            </div>
+      <h2 class="subtitle">Work Experience</h2>
 
+      <div class="form-item">
+        <div class="form-item-title">Year of Experience</div>
+        <input
+          type="text"
+          name="yoe"
+          placeholder="Enter You no. of Experience"
+        />
+      </div>
 
-            <hr />
+      <hr />
 
-            <h2 class="subtitle">Social Media</h2>
-            
-            <div class="form-item">
-                <div class="form-item-title">LinkedIn</div>
-                <input type="text" name="linkedin" placeholder="LinkedIn URL"  />
-            </div>
-           
-            <div class="form-item">
-                <div class="form-item-title">Twitter</div>
-                <input type="text" name="twitter" placeholder="Twitter URL"  />
-            </div>
+      <h2 class="subtitle">Social Media</h2>
 
-            <div class="form-item">
-                <div class="form-item-title">Github</div>
-                <input type="text" name="github" placeholder="Github URL"  />
-            </div>
-           
-            <div class="form-item">
-                <div class="form-item-title">Stackoverflow</div>
-                <input type="text" name="stackoverflow" placeholder="Stackoverflow URL"  />
-            </div>
-           
+      <div class="form-item">
+        <div class="form-item-title">LinkedIn</div>
+        <input type="text" name="linkedin" placeholder="LinkedIn URL" />
+      </div>
 
+      <div class="form-item">
+        <div class="form-item-title">Twitter</div>
+        <input type="text" name="twitter" placeholder="Twitter URL" />
+      </div>
 
-            <hr />
+      <div class="form-item">
+        <div class="form-item-title">Github</div>
+        <input type="text" name="github" placeholder="Github URL" />
+      </div>
 
-            <h2 class="subtitle">Other</h2>
-           
-            <div class="form-item">
-                <div class="form-item-title">Gender</div>
+      <div class="form-item">
+        <div class="form-item-title">Stackoverflow</div>
+        <input
+          type="text"
+          name="stackoverflow"
+          placeholder="Stackoverflow URL"
+        />
+      </div>
 
-                <select name="gender">
-                    <option value="male" selected>Male</option>
-                    <option value="female">Female</option> 
-                    <option value="others">Others</option>
-                </select>
-            </div>
+      <hr />
 
-            <button type="button" id="save" class="button is-primary is-fullwidth">Save</button>
-        </form>
-    </body>
+      <h2 class="subtitle">Other</h2>
 
-    <script src="options.js"></script>
+      <div class="form-item">
+        <div class="form-item-title">Gender</div>
+
+        <select name="gender">
+          <option value="male" selected>Male</option>
+          <option value="female">Female</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <button type="button" id="save" class="button is-primary is-fullwidth">
+        Save
+      </button>
+    </form>
+  </body>
+
+  <script src="options.js"></script>
 </html>
