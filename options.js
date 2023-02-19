@@ -11,11 +11,15 @@ let city = document.getElementsByName("city")[0];
 let addressline1 = document.getElementsByName("addressline1")[0];
 let addressline2 = document.getElementsByName("addressline2")[0];
 let pincode = document.getElementsByName("pincode")[0];
+
+let portfolio = document.getElementsByName("portfolio")[0];
+
 // let password = document.getElementsByName('password')[0];
 
 // let passwordFormItem = document.getElementById('password-form-item');
 
 let yoe = document.getElementsByName("yoe")[0];
+let latestcompany = document.getElementsByName("latestcompany")[0];
 
 let linkedin = document.getElementsByName("linkedin")[0];
 let twitter = document.getElementsByName("twitter")[0];
@@ -59,14 +63,14 @@ var tempProfileInput = {
   addressline2,
   pincode,
   yoe,
-
+  latestcompany,
   linkedin,
   twitter,
   github,
   stackoverflow,
   gender,
+  portfolio,
 };
-// console.log(tempProfileInput)
 
 let saveBtn = document.getElementById("save");
 saveBtn.onclick = async () => {
@@ -76,7 +80,7 @@ saveBtn.onclick = async () => {
     value[key] = tempProfileInput[key].value;
   }
   chrome.storage.sync.set({ userprofile: JSON.stringify(value) }, (e) => {
-    // alert("SAVED");
+    alert("SAVED !");
     // console.log(e);
   });
   // localStorage.setItem("userprofile",JSON.stringify(value))
@@ -127,7 +131,9 @@ addressline1.value = "601, Swami Bhavan";
 addressline2.value = "SVNIT";
 pincode.value = "390013";
 yoe.value = 1;
+latestcompany.value = "Factors.AI";
 linkedin.value = "https://www.linkedin.com/in/pushpendrahpx/";
 twitter.value = "https://twitter.com/pushpendrahpx20";
 github.value = "https://github.com/pushpendrahpx";
 gender.value = "male";
+portfolio.value = "https://pushpendrahpx.me";
